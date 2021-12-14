@@ -35,6 +35,7 @@ function App() {
 
   const [randomUserJSON, setRandomUserJSON ] = useState('')
   const [userData, setUserData] = useState([])
+  
   useEffect(()=>{
     getResponce().then((randomData)=>{
       setRandomUserJSON(JSON.stringify(randomData,null, 2));
@@ -56,6 +57,8 @@ function App() {
 
     </div>
       
+      <p>you can also use the API for your ref </p> <a href='https://randomuser.me/api'> click here( to get link)</a>
+      <h1>Below is the JSON data for ref</h1>
       <pre>
         {randomUserJSON}
       </pre>
